@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>957</width>
-    <height>562</height>
+    <height>512</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,14 +23,20 @@
       <height>17</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">QLabel { background: red}</string>
     </property>
     <property name="text">
-     <string>T1</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;T1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho1">
+   <widget class="QLabel" name="labelTrilho1">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -46,7 +52,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho4">
+   <widget class="QLabel" name="labelTrilho10">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -62,32 +68,6 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>470</y>
-      <width>99</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Ligar</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>470</y>
-      <width>98</width>
-      <height>27</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Parar</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="labelTrem2">
     <property name="geometry">
      <rect>
@@ -97,14 +77,20 @@
       <height>17</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">QLabel { background: red}</string>
     </property>
     <property name="text">
-     <string>T2</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;T2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho1_3">
+   <widget class="QLabel" name="labelTrilho3">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -120,7 +106,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho1_4">
+   <widget class="QLabel" name="labelTrilho4">
     <property name="geometry">
      <rect>
       <x>50</x>
@@ -136,7 +122,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho1_2">
+   <widget class="QLabel" name="labelTrilho2">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -152,7 +138,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho4_3">
+   <widget class="QLabel" name="labelTrilho11">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -168,7 +154,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho4_4">
+   <widget class="QLabel" name="labelTrilho12">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -184,7 +170,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho4_5">
+   <widget class="QLabel" name="labelTrilho14">
     <property name="geometry">
      <rect>
       <x>230</x>
@@ -200,7 +186,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho4_6">
+   <widget class="QLabel" name="labelTrilho15">
     <property name="geometry">
      <rect>
       <x>430</x>
@@ -216,7 +202,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho4_7">
+   <widget class="QLabel" name="labelTrilho16">
     <property name="geometry">
      <rect>
       <x>430</x>
@@ -232,7 +218,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho1_5">
+   <widget class="QLabel" name="labelTrilho5">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -248,7 +234,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho1_6">
+   <widget class="QLabel" name="labelTrilho6">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -264,7 +250,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho1_7">
+   <widget class="QLabel" name="labelTrilho7">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -280,7 +266,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho4_8">
+   <widget class="QLabel" name="labelTrilho17">
     <property name="geometry">
      <rect>
       <x>630</x>
@@ -296,7 +282,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho4_9">
+   <widget class="QLabel" name="labelTrilho18">
     <property name="geometry">
      <rect>
       <x>630</x>
@@ -312,7 +298,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho1_8">
+   <widget class="QLabel" name="labelTrilho8">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -328,7 +314,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_trilho1_9">
+   <widget class="QLabel" name="labelTrilho9">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -353,11 +339,17 @@
       <height>17</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">QLabel { background: red}</string>
     </property>
     <property name="text">
-     <string>T3</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;T3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="labelTrem4">
@@ -369,11 +361,17 @@
       <height>17</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">QLabel { background: red}</string>
     </property>
     <property name="text">
-     <string>T4</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;T4&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="labelTrem5">
@@ -385,11 +383,29 @@
       <height>17</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Light</family>
+      <pointsize>11</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="styleSheet">
      <string notr="true">QLabel { background: red}</string>
     </property>
     <property name="text">
-     <string>T5</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;T5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="labelTrem6">
@@ -401,38 +417,440 @@
       <height>17</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
     <property name="styleSheet">
      <string notr="true">QLabel { background: red}</string>
     </property>
     <property name="text">
-     <string>T6</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;T6&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <zorder>label_trilho4_7</zorder>
-   <zorder>label_trilho1_5</zorder>
-   <zorder>label_trilho4_5</zorder>
-   <zorder>label_trilho4_3</zorder>
-   <zorder>label_trilho4</zorder>
-   <zorder>label_trilho1_3</zorder>
-   <zorder>label_trilho1_2</zorder>
-   <zorder>label_trilho4_6</zorder>
-   <zorder>label_trilho4_4</zorder>
-   <zorder>label_trilho1</zorder>
+   <widget class="QSlider" name="sliderVelTrem1">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>90</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>201</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="value">
+     <number>100</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>70</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Trêm 1</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>130</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Trêm 2</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderVelTrem2">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>150</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="value">
+     <number>100</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>250</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Trêm 4</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>190</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Trêm 3</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderVelTrem3">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>210</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="value">
+     <number>100</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderVelTrem4">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>270</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="value">
+     <number>100</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderVelTrem5">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>330</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="value">
+     <number>100</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sliderVelTrem6">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>390</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>200</number>
+    </property>
+    <property name="value">
+     <number>100</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>370</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Trêm 6</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>310</y>
+      <width>51</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Trêm 5</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>80</y>
+      <width>64</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="intValue" stdset="0">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber_2">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>140</y>
+      <width>64</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="intValue" stdset="0">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber_3">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>200</y>
+      <width>64</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="intValue" stdset="0">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber_4">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>260</y>
+      <width>64</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="intValue" stdset="0">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber_5">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>320</y>
+      <width>64</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="intValue" stdset="0">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber_6">
+    <property name="geometry">
+     <rect>
+      <x>880</x>
+      <y>380</y>
+      <width>64</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="intValue" stdset="0">
+     <number>100</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>20</y>
+      <width>231</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu Light</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>VELOCIDADE DOS TRENS</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <zorder>labelTrilho16</zorder>
+   <zorder>labelTrilho5</zorder>
+   <zorder>labelTrilho14</zorder>
+   <zorder>labelTrilho11</zorder>
+   <zorder>labelTrilho10</zorder>
+   <zorder>labelTrilho3</zorder>
+   <zorder>labelTrilho2</zorder>
+   <zorder>labelTrilho15</zorder>
+   <zorder>labelTrilho12</zorder>
+   <zorder>labelTrilho1</zorder>
    <zorder>labelTrem1</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>pushButton_2</zorder>
    <zorder>labelTrem2</zorder>
-   <zorder>label_trilho1_4</zorder>
-   <zorder>label_trilho1_6</zorder>
-   <zorder>label_trilho1_7</zorder>
-   <zorder>label_trilho4_8</zorder>
-   <zorder>label_trilho4_9</zorder>
-   <zorder>label_trilho1_8</zorder>
-   <zorder>label_trilho1_9</zorder>
+   <zorder>labelTrilho4</zorder>
+   <zorder>labelTrilho6</zorder>
+   <zorder>labelTrilho7</zorder>
+   <zorder>labelTrilho17</zorder>
+   <zorder>labelTrilho18</zorder>
+   <zorder>labelTrilho8</zorder>
+   <zorder>labelTrilho9</zorder>
    <zorder>labelTrem3</zorder>
    <zorder>labelTrem4</zorder>
    <zorder>labelTrem5</zorder>
    <zorder>labelTrem6</zorder>
+   <zorder>sliderVelTrem1</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>sliderVelTrem2</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>sliderVelTrem3</zorder>
+   <zorder>sliderVelTrem4</zorder>
+   <zorder>sliderVelTrem5</zorder>
+   <zorder>sliderVelTrem6</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_6</zorder>
+   <zorder>lcdNumber</zorder>
+   <zorder>lcdNumber_2</zorder>
+   <zorder>lcdNumber_3</zorder>
+   <zorder>lcdNumber_4</zorder>
+   <zorder>lcdNumber_5</zorder>
+   <zorder>lcdNumber_6</zorder>
+   <zorder>label_7</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

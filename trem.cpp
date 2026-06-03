@@ -7,13 +7,19 @@ Trem::Trem(int ID, int x, int y){
     this->x = x;
     this->y = y;
     velocidade = 100;
+    estaParado = false;
 }
 
 //Função a ser executada após executar trem->START
 void Trem::run(){
     while(true){
+        if (estaParado) {
+            msleep(velocidade);
+            continue;
+        }
+
         switch(ID){
-        case 1:     //Trem 1
+        case 1: //Trem 1
             if (y == 20 && x <230)
                 x+=10;
             else if (x == 230 && y < 220)
@@ -82,10 +88,23 @@ void Trem::run(){
         default:
             break;
         }
+
         msleep(velocidade);
     }
 }
 
+void Trem::alterarVelocidade(int valorSlider){
+    this->velocidade = 200 - valorSlider;
+    this->estaParado = false;
+
+    if (valorSlider == 200) {
+        this->velocidade = 1;
+    }
+
+    if (valorSlider == 0) {
+        this->estaParado = true;
+    }
+}
 
 
 

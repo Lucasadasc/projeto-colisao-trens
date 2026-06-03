@@ -28,6 +28,22 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(trem4,SIGNAL(updateGUI(int,int,int)),SLOT(updateInterface(int,int,int)));
     connect(trem5,SIGNAL(updateGUI(int,int,int)),SLOT(updateInterface(int,int,int)));
     connect(trem6,SIGNAL(updateGUI(int,int,int)),SLOT(updateInterface(int,int,int)));
+
+    // Conecta os Sliders aos LCDs usando a sintaxe clássica (via interface deu problema)
+    connect(ui->sliderVelTrem1, SIGNAL(valueChanged(int)), ui->lcdNumber, SLOT(display(int)));
+    connect(ui->sliderVelTrem2, SIGNAL(valueChanged(int)), ui->lcdNumber_2, SLOT(display(int)));
+    connect(ui->sliderVelTrem3, SIGNAL(valueChanged(int)), ui->lcdNumber_3, SLOT(display(int)));
+    connect(ui->sliderVelTrem4, SIGNAL(valueChanged(int)), ui->lcdNumber_4, SLOT(display(int)));
+    connect(ui->sliderVelTrem5, SIGNAL(valueChanged(int)), ui->lcdNumber_5, SLOT(display(int)));
+    connect(ui->sliderVelTrem6, SIGNAL(valueChanged(int)), ui->lcdNumber_6, SLOT(display(int)));
+
+    // Inicia os trens em movimento
+    trem1->start();
+    trem2->start();
+    trem3->start();
+    trem4->start();
+    trem5->start();
+    trem6->start();
 }
 
 //Função que será executada quando o sinal UPDATEGUI for emitido
@@ -61,28 +77,36 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-/*
- * Ao clicar, trens começam execução
- */
-void MainWindow::on_pushButton_clicked()
+
+
+void MainWindow::on_sliderVelTrem1_valueChanged(int value)
 {
-    trem1->start();
-    trem2->start();
-    trem3->start();
-    trem4->start();
-    trem5->start();
-    trem6->start();
+    trem1->alterarVelocidade(value);
+
 }
 
-/*
- * Ao clicar, trens param execução
- */
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_sliderVelTrem2_valueChanged(int value)
 {
-    trem1->terminate();
-    trem2->terminate();
-    trem3->terminate();
-    trem4->terminate();
-    trem5->terminate();
-    trem6->terminate();
+    trem2->alterarVelocidade(value);
 }
+
+void MainWindow::on_sliderVelTrem3_valueChanged(int value)
+{
+    trem3->alterarVelocidade(value);
+}
+
+void MainWindow::on_sliderVelTrem4_valueChanged(int value)
+{
+    trem4->alterarVelocidade(value);
+}
+
+void MainWindow::on_sliderVelTrem5_valueChanged(int value)
+{
+    trem5->alterarVelocidade(value);
+}
+
+void MainWindow::on_sliderVelTrem6_valueChanged(int value)
+{
+    trem6->alterarVelocidade(value);
+}
+

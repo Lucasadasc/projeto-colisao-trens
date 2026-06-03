@@ -1,0 +1,10 @@
+Para efeitos de explicação e lembranças do porque escolhemos certas coisas, iremos deixar algumas anotações aqui.
+
+- Por que usar uma variavel pra controlar se os trens estão parados?
+        Inicialmente pensamos em usar o método "terminate()" da QThread para parar os trens, entretanto, como estamos 
+    em um contexto de cruzamentos, se por acaso a thread for matada, ela poderá ser morta no meio de um cruzamento,
+    resultando em uma situação onde o trem estaria no meio do cruzamento e não poderia mais se mover, travando assim
+    o cruzamento.
+    
+        Sendo assim, optamos por usar uma variavel para controlar se os trens estão parados, de forma que os trens 
+    parem voluntariamente antes de entrar no túnel.
