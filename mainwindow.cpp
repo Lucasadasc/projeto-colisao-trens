@@ -7,13 +7,22 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    //Cria o trem com seu (ID, posição X, posição Y)
-    trem1 = new Trem(1,30,20);
-    trem2 = new Trem(2,230,20);
-    trem3 = new Trem(3,430,20);
-    trem4 = new Trem(4,30,220);
-    trem5 = new Trem(5,230,320);
-    trem6 = new Trem(6,430,220);
+    //Cria o trem com seu (ID, posição X, posição Y, &malha)
+    trem1 = new Trem(1,30,20,&malha); // &malha passa o endereço de memória da variável global malha
+    trem2 = new Trem(2,230,20,&malha);
+    trem3 = new Trem(3,430,20,&malha);
+    trem4 = new Trem(4,30,220,&malha);
+    trem5 = new Trem(5,230,320,&malha);
+    trem6 = new Trem(6,430,220,&malha);
+
+    // Força a exibição dos trens em suas posições iniciais no startup da janela
+    // Isso faz com que o trem apareça na posição inicial mesmo se o semáforo estiver fechado
+    updateInterface(1, 30, 20);
+    updateInterface(2, 230, 20);
+    updateInterface(3, 430, 20);
+    updateInterface(4, 30, 220);
+    updateInterface(5, 230, 320);
+    updateInterface(6, 430, 220);
 
     /*
      * Conecta o sinal UPDATEGUI à função UPDATEINTERFACE.

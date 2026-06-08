@@ -37,6 +37,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    RegioesCriticas malha;
 
     //Cria os objetos TREM's
     Trem *trem1;

@@ -9,5 +9,6 @@ Para efeitos de explicação e lembranças do porque escolhemos certas coisas, i
         Sendo assim, optamos por usar uma variavel para controlar se os trens estão parados, de forma que os trens 
     parem voluntariamente antes de entrar no túnel.
 
+- Para não o strturck 
 
 LOCK E UNLOCK ANTES DE ENTRAR NA REGIÃO CRITICA (JÁ EVITA COLISÕES)
