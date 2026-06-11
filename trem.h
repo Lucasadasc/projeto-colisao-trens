@@ -13,11 +13,14 @@ private:
     QWaitCondition condicao;
     std::queue<int> fila; // Guarda os IDs na ordem de chegada
     bool ocupado;
+    int dono;
 
 public:
-    FilaFIFO() : ocupado(false) {}
+    FilaFIFO() : ocupado(false), dono(-1) {}
     void entrar(int idTrem);
     void sair();
+    int getDono();
+    bool estaOcupado();
 };
 
 struct RegioesCriticas {
@@ -31,10 +34,10 @@ struct RegioesCriticas {
     FilaFIFO regiaoCriticaH;
     FilaFIFO regiaoCriticaI;
 
-    FilaFIFO podeEntrarLoop1;
-    FilaFIFO podeEntrarLoop2;
-    FilaFIFO podeEntrarLoop3;
-    FilaFIFO podeEntrarLoop4;
+    FilaFIFO controleTransitoArea1;
+    FilaFIFO controleTransitoArea2;
+    FilaFIFO controleTransitoArea3;
+    FilaFIFO controleTransitoArea4;
 
     RegioesCriticas() {}
 };

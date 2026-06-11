@@ -13,14 +13,30 @@ void FilaFIFO::entrar(int idTrem) {
     }
     fila.pop();
     ocupado = true;
+    dono = idTrem;
     mutex.unlock();
 }
 
 void FilaFIFO::sair() {
     mutex.lock();
     ocupado = false;
+    dono = -1;
     condicao.wakeAll();
     mutex.unlock();
+}
+
+int FilaFIFO::getDono() {
+    mutex.lock();
+    int d = dono;
+    mutex.unlock();
+    return d;
+}
+
+bool FilaFIFO::estaOcupado() {
+    mutex.lock();
+    bool o = ocupado;
+    mutex.unlock();
+    return o;
 }
 
 //Construtor
@@ -88,7 +104,7 @@ void Trem::run(){
         case 2: //Trem 2
             if (y == 20 && x < 430) {
                 if (estaEntrandoEmRegiaoCriticao('E')) {
-                    malha->podeEntrarLoop4.entrar(ID);
+                    malha->controleTransitoArea4.entrar(ID);
                     malha->regiaoCriticaE.entrar(ID);
                     lockedE = true;
                 }
@@ -101,11 +117,11 @@ void Trem::run(){
                 }
             } else if (x == 430 && y < 320) {
                 if (estaEntrandoEmRegiaoCriticao('G')) {
-                    malha->podeEntrarLoop2.entrar(ID);
+                    malha->controleTransitoArea2.entrar(ID);
                     malha->regiaoCriticaG.entrar(ID);
                     lockedG = true;
                 } else if (estaEntrandoEmRegiaoCriticao('B')) {
-                    malha->podeEntrarLoop3.entrar(ID);
+                    malha->controleTransitoArea3.entrar(ID);
                     malha->regiaoCriticaB.entrar(ID);
                     lockedB = true;
                 }
@@ -115,12 +131,15 @@ void Trem::run(){
                         malha->regiaoCriticaE.sair();
                         lockedE = false;
                     }
-                    malha->podeEntrarLoop4.sair();
+                    malha->controleTransitoArea4.sair();
                 }
             } else if (x > 230 && y == 320) {
                 if (estaEntrandoEmRegiaoCriticao('F')) {
-                    malha->podeEntrarLoop3.sair(); // Libera o Loop 3 antes de travar o Loop 1
-                    malha->podeEntrarLoop1.entrar(ID);
+                    while (malha->regiaoCriticaA.getDono() == 1) {
+                        msleep(10);
+                    }
+                    malha->controleTransitoArea3.sair(); // Libera o Loop 3 antes de travar o Loop 1
+                    malha->controleTransitoArea1.entrar(ID);
                     malha->regiaoCriticaF.entrar(ID);
                     lockedF = true;
                 }
@@ -130,7 +149,7 @@ void Trem::run(){
                         malha->regiaoCriticaG.sair();
                         lockedG = false;
                     }
-                    malha->podeEntrarLoop2.sair();
+                    malha->controleTransitoArea2.sair();
                 }
             } else {
                 if (estaEntrandoEmRegiaoCriticao('D')) {
@@ -149,7 +168,7 @@ void Trem::run(){
                         malha->regiaoCriticaF.sair();
                         lockedF = false;
                     }
-                    malha->podeEntrarLoop1.sair();
+                    malha->controleTransitoArea1.sair();
                 }
             }
             emit updateGUI(ID, x, y);
@@ -162,11 +181,11 @@ void Trem::run(){
                         malha->regiaoCriticaE.sair();
                         lockedE = false;
                     }
-                    malha->podeEntrarLoop4.sair();
+                    malha->controleTransitoArea4.sair();
                 }
             } else if (x == 630 && y < 220) {
                 if (estaEntrandoEmRegiaoCriticao('C')) {
-                    malha->podeEntrarLoop4.entrar(ID);
+                    malha->controleTransitoArea4.entrar(ID);
                     malha->regiaoCriticaC.entrar(ID);
                     lockedC = true;
                 }
@@ -191,8 +210,7 @@ void Trem::run(){
         case 4: //Trem 4
             if (y == 220 && x < 230) {
                 if (estaEntrandoEmRegiaoCriticao('F')) {
-                    malha->podeEntrarLoop1.sair(); // Libera o Loop 1 antes de travar o Loop 3
-                    malha->podeEntrarLoop3.entrar(ID);
+                    malha->controleTransitoArea3.entrar(ID);
                     malha->regiaoCriticaF.entrar(ID);
                     lockedF = true;
                 }
@@ -208,6 +226,7 @@ void Trem::run(){
                         malha->regiaoCriticaF.sair();
                         lockedF = false;
                     }
+                    malha->controleTransitoArea1.sair();
                 }
                 if (estaSaindoRegiaoCritica('A')) {
                     if (lockedA) {
@@ -222,11 +241,11 @@ void Trem::run(){
                         malha->regiaoCriticaH.sair();
                         lockedH = false;
                     }
-                    malha->podeEntrarLoop3.sair();
+                    malha->controleTransitoArea3.sair();
                 }
             } else {
                 if (estaEntrandoEmRegiaoCriticao('A')) {
-                    malha->podeEntrarLoop1.entrar(ID);
+                    malha->controleTransitoArea1.entrar(ID);
                     malha->regiaoCriticaA.entrar(ID);
                     lockedA = true;
                 }
@@ -260,12 +279,15 @@ void Trem::run(){
                         malha->regiaoCriticaB.sair();
                         lockedB = false;
                     }
-                    malha->podeEntrarLoop3.sair();
+                    malha->controleTransitoArea3.sair();
                 }
             } else if (x > 230 && y == 420) {
                 if (estaEntrandoEmRegiaoCriticao('H')) {
-                    malha->podeEntrarLoop2.entrar(ID);
-                    malha->podeEntrarLoop3.entrar(ID);
+                    while (malha->controleTransitoArea1.estaOcupado() || malha->regiaoCriticaB.estaOcupado()) {
+                        msleep(10);
+                    }
+                    malha->controleTransitoArea2.entrar(ID);
+                    malha->controleTransitoArea3.entrar(ID);
                     malha->regiaoCriticaH.entrar(ID);
                     lockedH = true;
                 }
@@ -275,7 +297,7 @@ void Trem::run(){
                         malha->regiaoCriticaI.sair();
                         lockedI = false;
                     }
-                    malha->podeEntrarLoop2.sair();
+                    malha->controleTransitoArea2.sair();
                 }
             } else {
                 if (estaEntrandoEmRegiaoCriticao('B')) {
@@ -296,7 +318,7 @@ void Trem::run(){
                         malha->regiaoCriticaG.sair();
                         lockedG = false;
                     }
-                    malha->podeEntrarLoop2.sair();
+                    malha->controleTransitoArea2.sair();
                 }
             } else if (x == 630 && y < 420) {
                 y += 10;
@@ -305,12 +327,12 @@ void Trem::run(){
                         malha->regiaoCriticaC.sair();
                         lockedC = false;
                     }
-                    malha->podeEntrarLoop4.sair();
+                    malha->controleTransitoArea4.sair();
                 }
             } else if (x > 430 && y == 420) {
                 if (estaEntrandoEmRegiaoCriticao('I')) {
-                    malha->podeEntrarLoop4.entrar(ID);
-                    malha->podeEntrarLoop2.entrar(ID);
+                    malha->controleTransitoArea4.entrar(ID);
+                    malha->controleTransitoArea2.entrar(ID);
                     malha->regiaoCriticaI.entrar(ID);
                     lockedI = true;
                 }
