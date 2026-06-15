@@ -12,3 +12,14 @@ Para efeitos de explicação e lembranças do porque escolhemos certas coisas, i
 - Para não o strturck 
 
 LOCK E UNLOCK ANTES DE ENTRAR NA REGIÃO CRITICA (JÁ EVITA COLISÕES)
+
+Você identificou o problema perfeitamente! Havia de fato um deadlock de ordem de aquisição de recursos na entrada das regiões H e B:
+
+QUANDO ADICIONEI A NOVA FLAG:
+- Trem 2 (que já estava na região G) segurava o semáforo controleTransitoArea2 e pedia passagem para entrar em B (que precisava de exclusaoMutuaB2H5).
+- Trem 5 (antes de entrar em H) pegava o exclusaoMutuaB2H5 e tentava adquirir controleTransitoArea2, travando ali.
+Como resultado, nenhum dos dois progredia para pedir a passagem propriamente dita nas regiões H ou B.
+
+Correção Efetuada:
+- Ajustei a ordem de bloqueio no trem.cpp para o Trem 5 adquirir primeiro o controleTransitoArea2 e somente depois tentar pegar o exclusaoMutuaB2H5. 
+- Isso define uma hierarquia de locks consistente para ambos os trens (controleTransitoArea2 -> exclusaoMutuaB2H5), resolvendo completamente a interdependência e o deadlock.

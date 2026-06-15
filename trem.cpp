@@ -289,8 +289,8 @@ void Trem::run(){
                     while (malha->controleTransitoArea1.estaOcupado() || malha->regiaoCriticaB.estaOcupado()) {
                         msleep(10);
                     }
-                    malha->exclusaoMutuaB2H5.entrar(ID);
                     malha->controleTransitoArea2.entrar(ID);
+                    malha->exclusaoMutuaB2H5.entrar(ID);
                     malha->controleTransitoArea3.entrar(ID);
                     malha->regiaoCriticaH.entrar(ID);
                     lockedH = true;
