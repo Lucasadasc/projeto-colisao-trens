@@ -121,6 +121,7 @@ void Trem::run(){
                     malha->regiaoCriticaG.entrar(ID);
                     lockedG = true;
                 } else if (estaEntrandoEmRegiaoCriticao('B')) {
+                    malha->exclusaoMutuaB2H5.entrar(ID);
                     malha->controleTransitoArea3.entrar(ID);
                     malha->regiaoCriticaB.entrar(ID);
                     lockedB = true;
@@ -161,6 +162,7 @@ void Trem::run(){
                     if (lockedB) {
                         malha->regiaoCriticaB.sair();
                         lockedB = false;
+                        malha->exclusaoMutuaB2H5.sair();
                     }
                 }
                 if (estaSaindoRegiaoCritica('F')) {
@@ -266,6 +268,7 @@ void Trem::run(){
                     if (lockedH) {
                         malha->regiaoCriticaH.sair();
                         lockedH = false;
+                        malha->exclusaoMutuaB2H5.sair();
                     }
                 }
             } else if (x == 430 && y < 420) {
@@ -286,6 +289,7 @@ void Trem::run(){
                     while (malha->controleTransitoArea1.estaOcupado() || malha->regiaoCriticaB.estaOcupado()) {
                         msleep(10);
                     }
+                    malha->exclusaoMutuaB2H5.entrar(ID);
                     malha->controleTransitoArea2.entrar(ID);
                     malha->controleTransitoArea3.entrar(ID);
                     malha->regiaoCriticaH.entrar(ID);

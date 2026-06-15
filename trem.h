@@ -38,6 +38,7 @@ struct RegioesCriticas {
     FilaFIFO controleTransitoArea2;
     FilaFIFO controleTransitoArea3;
     FilaFIFO controleTransitoArea4;
+    FilaFIFO exclusaoMutuaB2H5;
 
     RegioesCriticas() {}
 };
