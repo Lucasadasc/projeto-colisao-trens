@@ -7,38 +7,38 @@
 #include <QString>
 #include <queue>
 
-class FilaFIFO {
-private:
-    QMutex mutex;
-    QWaitCondition condicao;
-    std::queue<int> fila; // Guarda os IDs na ordem de chegada
-    bool ocupado;
-    int dono;
+class RegiaoCritica {
+    private:
+        QMutex mutex;
+        QWaitCondition condicao;
+        std::queue<int> fila; // Guarda os IDs na ordem de chegada
+        bool ocupado;
+        int dono;
 
-public:
-    FilaFIFO() : ocupado(false), dono(-1) {}
-    void entrar(int idTrem);
-    void sair();
-    int getDono();
-    bool estaOcupado();
+    public:
+        RegiaoCritica() : ocupado(false), dono(-1) {}
+        void entrar(int idTrem);
+        void sair();
+        int getDono();
+        bool estaOcupado();
 };
 
 struct RegioesCriticas {
-    FilaFIFO regiaoCriticaA;
-    FilaFIFO regiaoCriticaB;
-    FilaFIFO regiaoCriticaC;
-    FilaFIFO regiaoCriticaD;
-    FilaFIFO regiaoCriticaE;
-    FilaFIFO regiaoCriticaF;
-    FilaFIFO regiaoCriticaG;
-    FilaFIFO regiaoCriticaH;
-    FilaFIFO regiaoCriticaI;
+    RegiaoCritica regiaoCriticaA;
+    RegiaoCritica regiaoCriticaB;
+    RegiaoCritica regiaoCriticaC;
+    RegiaoCritica regiaoCriticaD;
+    RegiaoCritica regiaoCriticaE;
+    RegiaoCritica regiaoCriticaF;
+    RegiaoCritica regiaoCriticaG;
+    RegiaoCritica regiaoCriticaH;
+    RegiaoCritica regiaoCriticaI;
 
-    FilaFIFO controleTransitoArea1;
-    FilaFIFO controleTransitoArea2;
-    FilaFIFO controleTransitoArea3;
-    FilaFIFO controleTransitoArea4;
-    FilaFIFO exclusaoMutuaB2H5;
+    RegiaoCritica controleTransitoArea1;
+    RegiaoCritica controleTransitoArea2;
+    RegiaoCritica controleTransitoArea3;
+    RegiaoCritica controleTransitoArea4;
+    RegiaoCritica exclusaoMutuaB2H5;
 
     RegioesCriticas() {}
 };
@@ -83,7 +83,6 @@ private:
    // Métodos auxiliares de detecção por caractere (Opção 2 simplificada)
    bool estaEntrandoEmRegiaoCriticao(char regiao) const;
    bool estaSaindoRegiaoCritica(char regiao) const;
-   QString obterDescricaoPosicao(char regiao) const;
 };
 
 #endif // TREM_H

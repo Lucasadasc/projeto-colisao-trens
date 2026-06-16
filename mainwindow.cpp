@@ -91,7 +91,6 @@ MainWindow::~MainWindow()
 void MainWindow::on_sliderVelTrem1_valueChanged(int value)
 {
     trem1->alterarVelocidade(value);
-
 }
 
 void MainWindow::on_sliderVelTrem2_valueChanged(int value)

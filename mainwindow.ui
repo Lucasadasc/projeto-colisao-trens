@@ -387,7 +387,6 @@
      <font>
       <family>Ubuntu Light</family>
       <pointsize>11</pointsize>
-      <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
@@ -1157,6 +1156,142 @@ QSlider::sub-page:horizontal {
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QLabel" name="labelTrilho10_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>200</y>
+      <width>241</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: #ff8183}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTrilho10_3">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>260</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: #ff8183}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTrilho10_4">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>290</y>
+      <width>61</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: rgb(255, 170, 127)}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTrilho10_5">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>300</y>
+      <width>221</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: rgb(255, 170, 127)}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTrilho10_6">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>240</y>
+      <width>61</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: rgb(85, 255, 127)}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTrilho10_7">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>40</y>
+      <width>61</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: rgb(255, 170, 255)}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTrilho10_8">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>200</y>
+      <width>181</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: rgb(255, 170, 255)}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelTrilho10_9">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>390</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel { background: rgb(255, 170, 255)}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>labelTrilho10_6</zorder>
+   <zorder>labelTrilho10_9</zorder>
+   <zorder>labelTrilho10_8</zorder>
+   <zorder>labelTrilho10_7</zorder>
+   <zorder>labelTrilho10_5</zorder>
+   <zorder>labelTrilho10_4</zorder>
+   <zorder>labelTrilho10_3</zorder>
+   <zorder>labelTrilho10_2</zorder>
    <zorder>labelTrilho16</zorder>
    <zorder>labelTrilho5</zorder>
    <zorder>labelTrilho14</zorder>
@@ -1215,7 +1350,7 @@ QSlider::sub-page:horizontal {
      <x>0</x>
      <y>0</y>
      <width>957</width>
-     <height>20</height>
+     <height>19</height>
     </rect>
    </property>
   </widget>
