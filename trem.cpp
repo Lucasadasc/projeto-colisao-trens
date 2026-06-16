@@ -3,8 +3,8 @@
 #include <QString>
 #include <iostream>
 
-// Implementação da Fila FIFO
-void FilaFIFO::entrar(int idTrem) {
+// Implementação da classe RegiaoCritica
+void RegiaoCritica::entrar(int idTrem) {
     mutex.lock();
     fila.push(idTrem);
     // Dorme se a região estiver ocupada OU se não for a vez deste trem
@@ -17,7 +17,7 @@ void FilaFIFO::entrar(int idTrem) {
     mutex.unlock();
 }
 
-void FilaFIFO::sair() {
+void RegiaoCritica::sair() {
     mutex.lock();
     ocupado = false;
     dono = -1;
@@ -25,14 +25,14 @@ void FilaFIFO::sair() {
     mutex.unlock();
 }
 
-int FilaFIFO::getDono() {
+int RegiaoCritica::getDono() {
     mutex.lock();
     int d = dono;
     mutex.unlock();
     return d;
 }
 
-bool FilaFIFO::estaOcupado() {
+bool RegiaoCritica::estaOcupado() {
     mutex.lock();
     bool o = ocupado;
     mutex.unlock();
