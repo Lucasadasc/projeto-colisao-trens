@@ -35,6 +35,8 @@ private slots:
 
     void on_sliderVelTrem6_valueChanged(int value);
 
+    void on_checkBox_toggled(bool checked);
+
 private:
     Ui::MainWindow *ui;
     RegioesCriticas malha;

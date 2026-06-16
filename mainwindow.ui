@@ -387,6 +387,7 @@
      <font>
       <family>Ubuntu Light</family>
       <pointsize>11</pointsize>
+      <weight>50</weight>
       <italic>false</italic>
       <bold>false</bold>
      </font>
@@ -1156,7 +1157,7 @@ QSlider::sub-page:horizontal {
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="labelTrilho10_2">
+   <widget class="QLabel" name="regiao1A">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -1172,7 +1173,7 @@ QSlider::sub-page:horizontal {
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="labelTrilho10_3">
+   <widget class="QLabel" name="regiao1B">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -1188,7 +1189,7 @@ QSlider::sub-page:horizontal {
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="labelTrilho10_4">
+   <widget class="QLabel" name="regiao3A">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -1204,7 +1205,7 @@ QSlider::sub-page:horizontal {
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="labelTrilho10_5">
+   <widget class="QLabel" name="regiao3B">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -1220,7 +1221,7 @@ QSlider::sub-page:horizontal {
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="labelTrilho10_6">
+   <widget class="QLabel" name="regiao4">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -1236,7 +1237,7 @@ QSlider::sub-page:horizontal {
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="labelTrilho10_7">
+   <widget class="QLabel" name="regiao2A">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -1252,7 +1253,7 @@ QSlider::sub-page:horizontal {
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="labelTrilho10_8">
+   <widget class="QLabel" name="regiao2B">
     <property name="geometry">
      <rect>
       <x>450</x>
@@ -1268,7 +1269,7 @@ QSlider::sub-page:horizontal {
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="labelTrilho10_9">
+   <widget class="QLabel" name="regiao2C">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -1284,14 +1285,41 @@ QSlider::sub-page:horizontal {
      <string/>
     </property>
    </widget>
-   <zorder>labelTrilho10_6</zorder>
-   <zorder>labelTrilho10_9</zorder>
-   <zorder>labelTrilho10_8</zorder>
-   <zorder>labelTrilho10_7</zorder>
-   <zorder>labelTrilho10_5</zorder>
-   <zorder>labelTrilho10_4</zorder>
-   <zorder>labelTrilho10_3</zorder>
-   <zorder>labelTrilho10_2</zorder>
+   <widget class="QCheckBox" name="checkBox">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>430</y>
+      <width>231</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::RightToLeft</enum>
+    </property>
+    <property name="text">
+     <string>Exibir regiões dos semáforos</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>regiao4</zorder>
+   <zorder>regiao2C</zorder>
+   <zorder>regiao2B</zorder>
+   <zorder>regiao2A</zorder>
+   <zorder>regiao3B</zorder>
+   <zorder>regiao3A</zorder>
+   <zorder>regiao1B</zorder>
+   <zorder>regiao1A</zorder>
    <zorder>labelTrilho16</zorder>
    <zorder>labelTrilho5</zorder>
    <zorder>labelTrilho14</zorder>
@@ -1343,6 +1371,7 @@ QSlider::sub-page:horizontal {
    <zorder>labelTrem4</zorder>
    <zorder>labelTrem5</zorder>
    <zorder>labelTrem6</zorder>
+   <zorder>checkBox</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -1350,7 +1379,7 @@ QSlider::sub-page:horizontal {
      <x>0</x>
      <y>0</y>
      <width>957</width>
-     <height>19</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>

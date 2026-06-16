@@ -53,6 +53,17 @@ MainWindow::MainWindow(QWidget *parent) :
     trem4->start();
     trem5->start();
     trem6->start();
+
+    // Define a visibilidade inicial das labels de região crítica com base no checkbox
+    bool mostrarRegioes = ui->checkBox->isChecked();
+    ui->regiao1A->setVisible(mostrarRegioes);
+    ui->regiao1B->setVisible(mostrarRegioes);
+    ui->regiao2A->setVisible(mostrarRegioes);
+    ui->regiao2B->setVisible(mostrarRegioes);
+    ui->regiao2C->setVisible(mostrarRegioes);
+    ui->regiao3A->setVisible(mostrarRegioes);
+    ui->regiao3B->setVisible(mostrarRegioes);
+    ui->regiao4->setVisible(mostrarRegioes);
 }
 
 //Função que será executada quando o sinal UPDATEGUI for emitido
@@ -83,6 +94,27 @@ void MainWindow::updateInterface(int id, int x, int y){
 
 MainWindow::~MainWindow()
 {
+    trem1->terminate();
+    trem2->terminate();
+    trem3->terminate();
+    trem4->terminate();
+    trem5->terminate();
+    trem6->terminate();
+
+    trem1->wait();
+    trem2->wait();
+    trem3->wait();
+    trem4->wait();
+    trem5->wait();
+    trem6->wait();
+
+    delete trem1;
+    delete trem2;
+    delete trem3;
+    delete trem4;
+    delete trem5;
+    delete trem6;
+
     delete ui;
 }
 
@@ -116,5 +148,17 @@ void MainWindow::on_sliderVelTrem5_valueChanged(int value)
 void MainWindow::on_sliderVelTrem6_valueChanged(int value)
 {
     trem6->alterarVelocidade(value);
+}
+
+void MainWindow::on_checkBox_toggled(bool checked)
+{
+    ui->regiao1A->setVisible(checked);
+    ui->regiao1B->setVisible(checked);
+    ui->regiao2A->setVisible(checked);
+    ui->regiao2B->setVisible(checked);
+    ui->regiao2C->setVisible(checked);
+    ui->regiao3A->setVisible(checked);
+    ui->regiao3B->setVisible(checked);
+    ui->regiao4->setVisible(checked);
 }
 
