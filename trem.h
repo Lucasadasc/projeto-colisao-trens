@@ -38,7 +38,7 @@ struct RegioesCriticas {
     RegiaoCritica controleTransitoArea2;
     RegiaoCritica controleTransitoArea3;
     RegiaoCritica controleTransitoArea4;
-    RegiaoCritica exclusaoMutuaB2H5;
+    RegiaoCritica exclusaoMutuaT2T5;
 
     RegioesCriticas() {}
 };
