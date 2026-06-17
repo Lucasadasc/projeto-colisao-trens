@@ -48,7 +48,9 @@ Trem::Trem(int ID, int x, int y, RegioesCriticas *malha){
     velocidade = 100;
     estaParado = false;
 
-    // Inicializa as flags de travamento como false
+    // O Mutex garante que a região crítica seja acessada por um trem de cada vez.
+    // Essas flags locais garantem que o trem siga o protocolo correto de bloquear 
+    // e liberar uma única vez durante o seu trajeto físico (programação defensiva).
     lockedA = false;
     lockedB = false;
     lockedC = false;
