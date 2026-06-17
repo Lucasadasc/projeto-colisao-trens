@@ -464,8 +464,11 @@ bool Trem::estaSaindoRegiaoCritica(char regiao) const {
         }
         break;
     case 'E': // x = 430 e y entre 20 e 220 (T2 e T3)
-        if (ID == 2) resultado = (x == 430 && y == 230);
-        else if (ID == 3) resultado = (x == 440 && y == 20);
+        if (ID == 2){
+            resultado = (x == 430 && y == 240);
+        } else if (ID == 3) {
+            resultado = (x == 450 && y == 20);
+        }
         break;
     case 'F': // x = 230 e y entre 220 e 320 (T2 e T4)
         if (ID == 2) {
@@ -479,16 +482,28 @@ bool Trem::estaSaindoRegiaoCritica(char regiao) const {
         }
         break;
     case 'G': // x = 430 e y entre 220 e 320 (T2 e T6)
-        if (ID == 2) resultado = (x == 420 && y == 320);
-        else if (ID == 6) resultado = (x == 440 && y == 220);
+        if (ID == 2) {
+            resultado = (x == 410 && y == 320);
+        }
+        else if (ID == 6) {
+            resultado = (x == 450 && y == 220);
+        }
         break;
     case 'H': // x = 230 e y entre 320 e 420 (T4 e T5)
-        if (ID == 4) resultado = (x == 220 && y == 420);
-        else if (ID == 5) resultado = (x == 240 && y == 320);
+        if (ID == 4) {
+            resultado = (x == 210 && y == 420);
+        }
+        else if (ID == 5){
+            resultado = (x == 240 && y == 320);
+        }
         break;
     case 'I': // x = 430 e y entre 320 e 420 (T5 e T6)
-        if (ID == 5) resultado = (x == 420 && y == 420);
-        else if (ID == 6) resultado = (x == 430 && y == 310);
+        if (ID == 5) {
+            resultado = (x == 410 && y == 420);
+        }
+        else if (ID == 6){
+            resultado = (x == 430 && y == 300);
+        }
         break;
     }
 
