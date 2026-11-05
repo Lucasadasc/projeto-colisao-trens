@@ -1,4 +1,4 @@
-# Simulação de Trens — Sistemas Operacionais
+# Simulação de Trens (Sistemas Operacionais)
 
 Projeto acadêmico de Sistemas Operacionais da UFRN que simula seis trens em uma malha ferroviária com interface gráfica em C++ e Qt. Cada trem executa em uma thread própria e percorre um trajeto com trechos compartilhados, permitindo estudar concorrência, exclusão mútua e situações de deadlock.
 
